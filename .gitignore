@@ -2,3 +2,6 @@ target/
 .idea/
 *.iml
 *.ipr
+release/packaging
+release/temp
+release/release
