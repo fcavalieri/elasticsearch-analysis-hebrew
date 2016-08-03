@@ -14,8 +14,10 @@ import org.elasticsearch.SpecialPermission;
  * to initialize loading them and initializing the HebMorph analyzers.
  */
 public class DictReceiver {
-    private static String[] filePaths = {"plugins/analysis-hebrew/dictionary.dict", "/var/lib/hebmorph/dictionary.dict",
-                                            "plugins/analysis-hebrew/hspell-data-files/", "/var/lib/hspell-data-files/"};
+    /* The option that control the dictionary path is not forwarded to the plugin, which in turn tries to access paths for 
+       which he has no access to */
+    private static String[] filePaths = {/*"plugins/analysis-hebrew/dictionary.dict", "/var/lib/hebmorph/dictionary.dict",
+                                            "plugins/analysis-hebrew/hspell-data-files/",*/ "/var/lib/hspell-data-files/"};
     private static DictHebMorph dict = null;
 
     public static DictHebMorph getDictionary() {
