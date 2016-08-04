@@ -41,4 +41,6 @@ mkdir "$RELEASE_FOLDER"
       "hebmorph-lucene-2.3.3.jar" \
       "plugin-descriptor.properties" \
       "plugin-security.policy"
+  cd "${TEMP_FOLDER}/HebMorph/hspell-data-files"
+  tar cvzf "${RELEASE_FOLDER}/hspell-data-files.tar.gz" *
 )
